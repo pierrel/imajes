@@ -17,7 +17,7 @@ export AWSSECRET=[your secret key]
 export BUCKET=[intended bucket]
 ```
 
-Also make sure the bucket exists. (#1)
+Also make sure the bucket exists. ([#1](https://github.com/pierrel/imajes/issues/1))
 
 Place a bunch of images in your bucket.
 
