@@ -1,51 +1,36 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640" />
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Imajes : Clojure image manager" />
 
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
-    <title>Imajes by pierrel</title>
+    <title>Imajes</title>
   </head>
 
   <body>
-    <a id="forkme_banner" href="https://github.com/pierrel/imajes">View on GitHub</a>
-    <div class="shell">
 
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>Imajes</h1>
-            <h2>Clojure image manager</h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/pierrel/imajes">View on GitHub</a>
 
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/pierrel/imajes/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/pierrel/imajes/tarball/master" class="tgz"><em>download</em> .TGZ</a>
-        </span>
-      </section>
+          <h1 id="project_title">Imajes</h1>
+          <h2 id="project_tagline">Clojure image manager</h2>
 
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/pierrel/imajes/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/pierrel/imajes/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-      <span class="banner-fix"></span>
-
-
-      <section id="main_content">
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>Install</h1>
 
 <p>import the library into your project.clj file:</p>
@@ -55,16 +40,14 @@
 
 <h1>Example</h1>
 
-<p>Put your aws secret key into an environment variable called AWSSECRET and public key into AWSKEY. Also write the bucket name to an environment variable called BUCKET</p>
+<p>Put your aws secret key into an environment variable called AWSSECRET, public key into AWSKEY, and the bucket name to an environment variable called BUCKET</p>
 
 <div class="highlight"><pre><span class="nb">export </span><span class="nv">AWSKEY</span><span class="o">=[</span>your key<span class="o">]</span>
 <span class="nb">export </span><span class="nv">AWSSECRET</span><span class="o">=[</span>your secret key<span class="o">]</span>
 <span class="nb">export </span><span class="nv">BUCKET</span><span class="o">=[</span>intended bucket<span class="o">]</span>
 </pre></div>
 
-<p>Also make sure the bucket exists. (<a href="https://github.com/pierrel/imajes/issues/1">#1</a>)</p>
-
-<p>Place a bunch of images in your bucket.</p>
+<p>Make sure the bucket exists (<a href="https://github.com/pierrel/imajes/issues/1">#1</a>) and place a bunch of images in your bucket.</p>
 
 <div class="highlight"><pre><span class="p">(</span><span class="kd">ns </span><span class="nv">my-app</span>
     <span class="p">(</span><span class="ss">:use</span> <span class="nv">imajes.core</span> <span class="ss">:only</span> <span class="p">[</span><span class="nv">generate-thumbnails</span> <span class="nv">image-urls-map</span> <span class="nv">reset-image-key-list</span><span class="p">]))</span>
@@ -78,21 +61,17 @@
 <span class="p">(</span><span class="nf">reset-image-key-list</span><span class="p">)</span> <span class="c1">; will reset the cached version of image-urls-map</span>
 </pre></div>
       </section>
+    </div>
 
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>this project by <a href="https://github.com/pierrel">pierrel</a> can be found on <a href="https://github.com/pierrel/imajes">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Imajes maintained by <a href="https://github.com/pierrel">pierrel</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
-
     </div>
 
     
+
   </body>
 </html>
