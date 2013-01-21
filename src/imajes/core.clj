@@ -1,5 +1,6 @@
 (ns imajes.core
   (:require [aws.sdk.s3 :as s3])
+  (:use [imajes.config])
   (:import (javax.swing ImageIcon)
            (javax.imageio ImageIO)
            (java.io File ByteArrayOutputStream ByteArrayInputStream)
@@ -7,13 +8,6 @@
            (java.net URL)
            (java.awt Image)
            (java.awt RenderingHints)))
-
-(def creds {:access-key (System/getenv "AWSKEY")
-            :secret-key (System/getenv "AWSSECRET")})
-(def bucket (System/getenv "AWSBUCKET"))
-(def image-size 400)
-(def thumb-stamp (format "_THUMB%d" image-size))
-(def image-key-list (ref '()))
 
 (defn key-to-url [key]
   (format "http://s3.amazonaws.com/%s/%s" bucket key))
