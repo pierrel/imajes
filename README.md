@@ -10,16 +10,15 @@ import the library into your project.clj file:
 
 ## Example
 
-Put your aws secret key into an environment variable called AWSSECRET and public key into AWSKEY. Also write the bucket name to an environment variable called BUCKET
+Put your aws secret key into an environment variable called AWSSECRET, public key into AWSKEY, and the bucket name to an environment variable called BUCKET
 ```shell
 export AWSKEY=[your key]
 export AWSSECRET=[your secret key]
 export BUCKET=[intended bucket]
 ```
 
-Also make sure the bucket exists. ([#1](https://github.com/pierrel/imajes/issues/1))
+Make sure the bucket exists ([#1](https://github.com/pierrel/imajes/issues/1)) and place a bunch of images in your bucket.
 
-Place a bunch of images in your bucket.
 
 ```clojure
 (ns my-app
